@@ -27,14 +27,8 @@ def crawler():
 
     # 這邊是用Edge作為範例，可以依照你使用瀏覽器的習慣做修改
     options = Options()
-    # 隨機選擇User-Agent
-    user_agents = [
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.56",
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Edg/96.0.1054.55"
-    ]
-    options.add_argument(f"user-agent={random.choice(user_agents)}")
-    # options.add_argument("--headless")  # 執行時不顯示瀏覽器
+    
+    options.add_argument("--headless")  # 執行時不顯示瀏覽器
     options.add_argument("--disable-notifications")  # 禁止瀏覽器的彈跳通知
     #options.add_experimental_option("detach", True)  # 爬蟲完不關閉瀏覽器
     driver = webdriver.Edge(options=options)
