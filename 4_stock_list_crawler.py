@@ -29,7 +29,7 @@ def find_Taiwan50():
     #options.add_experimental_option("detach", True) # 爬蟲完不關閉瀏覽器
     driver = webdriver.Edge()
 
-    driver.get("https://www.cmoney.tw/etf/tw/0050/fundholding")
+    driver.get("https://www.cmoney.tw/etf/tw/0050")
 
     # TODO : 練習2
 
